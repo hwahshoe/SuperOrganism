@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Tajawal:300');
+body {
+	background-color: #000000;
+	background: url("../img/placeHolder.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	height: 100%;
+	font-size: 1.5vh;
+	z-index: -2;
+}
+
+#myCanvas {
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.bBox {
+	padding-top: 0.25em;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 2.25%;
+	position: absolute;
+	width: 70%;
+	height: auto;
+	/* border: 1pt solid red; */
+}
+
+#menu {
+	font-family: 'Tajawal', sans-serif;
+	font-size: 7.65em;
+	line-height: 0.7em;
+}
+
+.menu_item {
+	position: relative;
+	width: 60%;
+	/* border: 1pt solid blue; */
+	text-shadow: 0 0 5px #33FFD2, 0 0 36px #59F2FF;
+	margin-left: 20%;
+	margin-right: 20%;
+	filter: blur(0px);
+	padding-bottom: 20px;
+	animation-duration: 100s;
+	animation-iteration-count: infinite;
+}
+
+.menu_item:hover {
+	color: #33FFD2;
+}
+
+#item5 {
+	padding-bottom: 0em;
+}
+
+#item1, #item3, #item5 {
+	animation-name: movingLR;
+}
+
+#item2, #item4 {
+	animation-name: movingRL;
+}
+
+@keyframes movingLR {
+	0% {
+		margin-left: 20%;
+		top: 0px;
+		filter: blur(0.25px);
+	}
+	25% {
+		filter: blur(2px);
+	}
+	50% {
+		margin-left: calc(100% - 56.5%);
+		top: 0px;
+		filter: blur(0.25px);
+	}
+	75% {
+		filter: blur(2px);
+	}
+	100% {
+		margin-left: 20%;
+		top: 0px;
+		filter: blur(0.25px);
+	}
+}
+
+@keyframes movingRL {
+	0% {
+		margin-left: 20%;
+		top: 0px;
+		filter: blur(0.25px);
+	}
+	25% {
+		filter: blur(2px);
+	}
+	50% {
+		margin-left: 0%;
+		top: 0px;
+		filter: blur(0.25px);
+	}
+	75% {
+		filter: blur(2px);
+	}
+	100% {
+		margin-left: 20%;
+		top: 0px;
+		filter: blur(0.25px);
+	}
+}
